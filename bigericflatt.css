@@ -1,127 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Dancing+Script:wght@500&family=Libre+Baskerville:ital@1&family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
-
-@-webkit-keyframes vibrate-2{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}60%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}@keyframes vibrate-2{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}60%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
-.vibrate-2{-webkit-animation:vibrate-2 .3s linear infinite both;animation:vibrate-2 .3s linear infinite both}
-
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
 body {
-    text-align: center;
+    background-image: url('sky-07.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-body:hover {
-}
-
-.big {
-    font-family: 'Libre Baskerville', serif;
-    font-style: italic;
-    font-size: 50px;
-    /* transition: ease-in-out 2s; */
-    background-color: red;
-    width: 50vw;
+.first {
+    font-family: 'Tangerine', cursive;
     margin: auto;
-    border-radius: 100%;
-    transition: transform ease-in-out 2s, background-color ease-in-out 2s;
-
-
-}
-
-.big:hover {
-    transform: rotateZ(-360deg);
-    background-color: blue;
-    cursor: not-allowed;
-    /* transform-origin: 50% 0%; */
-}
-
-h3 {
-    font-family: 'Bangers';
-    font-size: 40px;
-}
-
-h4 {
-    font-size: 20px;
-}
-
-h5 {
-    font-family: 'Dancing Script';
-    font-size: 30px;
-}
-
-.oheric {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 90px;
-    background-color: pink;
-    display: block;
-    margin: auto;
+    width: 100%;
     text-align: center;
-    width: 90vw;
-    height: 90vw;
-    border-radius: 100%;
-}
-
-.duhh {
-    padding-top: 40vw;
-}
-
-.ericdate {
-    font-family: 'Girassol', cursive;
-    font-size: 100px;
-    
-}
-
-.uhoh {
-    font-family: 'Indie Flower', cursive;
-    font-size: 40px;
+    font-size: 80px;
+    margin-top: 50vh;
+    animation-name: first;
+    animation-duration: 4s;
+    padding-bottom: 50vh;
 }
 
 
-#red {
-    color: red;
+@keyframes first {
+    0%   {opacity: 0; filter: blur(4px); font-size: 30px;}
+    100% {opacity: 1; filter: blur(0px); font-size: 80px;}
 }
 
-#yellow {
-    color: yellow;
+.second {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50vh;
 }
 
-#green {
-    color: green;
+section {
+    width: 100vw;
 }
 
-#blue {
-    color: blue;
+.dis {
+    mix-blend-mode: difference;
 }
 
-#purple {
+.hit-the-floor {
+    color: #fff;
+    font-size: 12em;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow: 
+      0 1px 0 #ccc, 
+      0 2px 0 #c9c9c9, 
+      0 3px 0 #bbb, 
+      0 4px 0 #b9b9b9, 
+      0 5px 0 #aaa, 
+      0 6px 1px rgba(0,0,0,.1), 
+      0 0 5px rgba(0,0,0,.1), 
+      0 1px 3px rgba(0,0,0,.3), 
+      0 3px 5px rgba(0,0,0,.2), 
+      0 5px 10px rgba(0,0,0,.25), 
+      0 10px 10px rgba(0,0,0,.2), 
+      0 20px 20px rgba(0,0,0,.15);
+  }
+  
+  .hit-the-floor {
+    text-align: center;
+    animation: flash .3s infinite;
+  }
+
+  @keyframes flash {
+    0%   {color: #fff; transform: rotateZ(-4deg);}
+    49%   {color: #fff; transform: rotateZ(-4deg);}
+    50% {color: rgba(255, 0, 0, 0); transform: rotateZ(4deg);}
+    100% {color: rgba(255, 0, 0, 0); transform: rotateZ(4deg);}
+}
+
+.third {
+    font-family: 'RocknRoll One', sans-serif;
+    text-align: center;
     color: purple;
+    font-size: 40px;
 }
 
-body {
-    background-color: yellow;
-    animation-name: example;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+@keyframes spin {
+    0%   {transform: rotateX(0deg);}
+    100%   {transform: rotateY(360deg);}
 }
 
-@keyframes example {
-    from {background-color: yellow;}
-    to {background-color: rgb(9, 0, 128);}
-  }
+.fourth {
+    font-family: 'Ultra', serif;
+    color: purple;
+    font-size: 120px;
+    margin: auto;
+    text-align: center;
+    animation: spin 1s infinite;
+    background: -webkit-linear-gradient(rgb(255, 0, 0), rgb(0, 119, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 300px;
+}
 
-  .boy {
-    font-family: 'Libre Baskerville', serif;
-    font-style: italic;
-    font-size: 90px;      
-  }
+@keyframes fifth {
+    0%   {    background: -webkit-linear-gradient(rgb(21, 255, 0), rgb(251, 255, 0));}
+    50% {    background: -webkit-linear-gradient(rgb(183, 0, 255), rgb(0, 255, 234));}
+    100%   {    background: -webkit-linear-gradient(rgb(21, 255, 0), rgb(251, 255, 0));}
+}
 
-  .wiredo {
-    font-family: 'Dancing Script';
-    font-size: 60px;
-  }
+.fifth {
+    font-size: 70px;
+    text-align: center;
+    animation: fifth 1s infinite;
+    height: 400px;
+}
 
-.r {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 90px;
+.sixth {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 120px;
+}
+
+.sixth span {
+    font-family: 'RocknRoll One', sans-serif;
+
 }
